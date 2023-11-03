@@ -7,6 +7,7 @@ import java.util.UUID;
 
 import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -34,7 +35,7 @@ public class BookingEntity {
 	private List<String> seatsBooked;
 	private LocalDate showDate;
 	private LocalTime showTime;
-	@Enumerated
+	@Enumerated(EnumType.STRING)
 	private BookingStatus bookingStatus;
 	private  Integer bookingAmount;
 	
